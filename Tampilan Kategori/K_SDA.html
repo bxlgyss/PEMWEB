@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style_kategori_instansi.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <title>Website Example</title>
+  <style>
+    @import url(https://fonts.googleapis.com/css?family=Gabriela);
+    @import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+    body {
+      font-family: 'Alegreya Sans', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #760504;
+    }
+
+    header {
+      background-color: #760504;
+      padding: 10px;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    header h1 {
+      font-size: 36px;
+      font-weight: bold;
+      margin-top: 30px;
+      margin-bottom: 30px;
+      color: #ffc857;
+      font-family: 'Poppins', sans-serif;
+      text-align: center;
+    }
+
+    header .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    header .logo img {
+      width: 50px;
+    }
+
+
+    .top {
+      position: relative;
+      height: 10px;
+      background: linear-gradient(141deg, #ffc857 0%, #dfdfdf 40%, #b12b24 90%);
+    }
+
+    .status {
+      background-color: #760504;
+      padding: 10px;
+      color: #000000;
+      padding: 20px;
+
+    }
+
+    .status h2 {
+      font-size: 27px;
+      font-weight: bold;
+      margin-bottom: 10px;
+      color: #FFF;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .page {
+      position: relative;
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 5px 20px 40px;
+    }
+
+    .pcss3t {
+      margin: 0;
+      padding: 0;
+      border: 0;
+      outline: none;
+      font-size: 0;
+      text-align: left;
+      margin-bottom: 20px;
+      margin-left: 25px;
+      margin-right: 25px;
+      background: #760504;
+    }
+
+    .pcss3t>input {
+      position: absolute;
+      left: -9999px;
+    }
+
+    .pcss3t>label {
+      position: relative;
+      display: inline-block;
+      margin: 0;
+      padding: 0;
+      border: 0;
+      outline: none;
+      cursor: pointer;
+      transition: all 0.1s;
+      -o-transition: all 0.1s;
+      -ms-transition: all 0.1s;
+      -moz-transition: all 0.1s;
+      -webkit-transition: all 0.1s;
+    }
+
+    .pcss3t>label i {
+      display: block;
+      float: left;
+      margin: 16px 8px 0 -2px;
+      padding: 0;
+      border: 0;
+      outline: none;
+      font-family: 'Alegreya Sans', sans-serif;
+      font-style: normal;
+      font-size: 17px;
+    }
+
+    .pcss3t>input:checked+label {
+      cursor: default;
+    }
+
+    .pcss3t>ul {
+      list-style: none;
+      position: relative;
+      display: block;
+      overflow: hidden;
+      margin: 0;
+      padding: 0;
+      border: 0;
+      outline: none;
+      font-size: 13px;
+    }
+
+    .pcss3t>ul>li {
+      position: absolute;
+      width: 100%;
+      overflow: auto;
+      padding: 30px 40px 40px;
+      box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      opacity: 0;
+      transition: all 0.5s;
+      -o-transition: all 0.5s;
+      -ms-transition: all 0.5s;
+      -moz-transition: all 0.5s;
+      -webkit-transition: all 0.5s;
+    }
+
+    .pcss3t>.tab-content-first:checked~ul .tab-content-first,
+    .pcss3t>.tab-content-2:checked~ul .tab-content-2,
+    .pcss3t>.tab-content-3:checked~ul .tab-content-3,
+    .pcss3t>.tab-content-4:checked~ul .tab-content-4,
+    .pcss3t>.tab-content-5:checked~ul .tab-content-5,
+    .pcss3t>.tab-content-6:checked~ul .tab-content-6,
+    .pcss3t>.tab-content-7:checked~ul .tab-content-7,
+    .pcss3t>.tab-content-8:checked~ul .tab-content-8,
+    .pcss3t>.tab-content-9:checked~ul .tab-content-9,
+    .pcss3t>.tab-content-last:checked~ul .tab-content-last {
+      z-index: 1;
+      top: 0;
+      left: 0;
+      opacity: 1;
+      -webkit-transform: scale(1, 1);
+      -webkit-transform: rotate(0deg);
+    }
+
+    .pcss3t-height-auto>ul {
+      height: auto !important;
+    }
+
+    .pcss3t-height-auto>ul>li {
+      position: static;
+      display: none;
+      height: auto !important;
+    }
+
+    .pcss3t-height-auto>.tab-content-first:checked~ul .tab-content-first,
+    .pcss3t-height-auto>.tab-content-2:checked~ul .tab-content-2,
+    .pcss3t-height-auto>.tab-content-3:checked~ul .tab-content-3,
+    .pcss3t-height-auto>.tab-content-4:checked~ul .tab-content-4,
+    .pcss3t-height-auto>.tab-content-5:checked~ul .tab-content-5,
+    .pcss3t-height-auto>.tab-content-last:checked~ul .tab-content-last {
+      display: block;
+    }
+
+    .pcss3t .grid-row {
+      margin-top: 20px;
+    }
+
+    .pcss3t .grid-row:after {
+      content: '';
+      display: table;
+      clear: both;
+    }
+
+    .pcss3t .grid-row:first-child {
+      margin-top: 0;
+    }
+
+    .pcss3t .grid-col {
+      display: block;
+      float: left;
+      margin-left: 2%;
+    }
+
+    .pcss3t .grid-col:first-child {
+      margin-left: 0;
+    }
+
+    .pcss3t .grid-col .inner {
+      padding: 10px 0;
+      border-radius: 5px;
+      background: #f2f2f2;
+      text-align: center;
+    }
+
+    .pcss3t .grid-col-1 {
+      width: 15%;
+    }
+
+    .pcss3t .grid-col-2 {
+      width: 32%;
+    }
+
+    .pcss3t .grid-col-3 {
+      width: 49%;
+    }
+
+    .pcss3t .grid-col-4 {
+      width: 66%;
+    }
+
+    .pcss3t .grid-col-5 {
+      width: 83%;
+    }
+
+    .pcss3t .grid-col-offset-1 {
+      margin-left: 19%;
+    }
+
+    .pcss3t .grid-col-offset-1:first-child {
+      margin-left: 17%;
+    }
+
+    .pcss3t .grid-col-offset-2 {
+      margin-left: 36%;
+    }
+
+    .pcss3t .grid-col-offset-2:first-child {
+      margin-left: 34%;
+    }
+
+    .pcss3t .grid-col-offset-3 {
+      margin-left: 53%;
+    }
+
+    .pcss3t .grid-col-offset-3:first-child {
+      margin-left: 51%;
+    }
+
+    .pcss3t .grid-col-offset-4 {
+      margin-left: 70%;
+    }
+
+    .pcss3t .grid-col-offset-4:first-child {
+      margin-left: 68%;
+    }
+
+    .pcss3t .grid-col-offset-5:first-child {
+      margin-left: 85%;
+    }
+
+
+
+    @media screen and (max-width: 980px) {}
+
+    @media screen and (max-width: 767px) {
+      .pcss3t>label {
+        display: block;
+      }
+
+      .pcss3t>.right {
+        float: none;
+      }
+    }
+
+    .pcss3t>label {
+      padding: 0 20px;
+      background: #760504;
+      font-size: 13px;
+      line-height: 49px;
+    }
+
+    .pcss3t>label:hover {
+      background: #f2f2f2;
+    }
+
+    .pcss3t>input:checked+label {
+      background: #fff;
+    }
+
+    .pcss3t>ul {
+      background: #fff;
+      text-align: left;
+    }
+
+    .pcss3t-steps>label:hover {
+      background: #e5e5e5;
+    }
+
+
+    .pcss3t-theme-1>label {
+      margin: 0 5px 5px 0;
+      border-radius: 5px;
+      background: #fff;
+      box-shadow: 0 2px #000(0, 0, 0, 0.2);
+      color: #808080;
+      opacity: 0.8;
+    }
+
+    .pcss3t-theme-1>label:hover {
+      background: #fff;
+      opacity: 1;
+    }
+
+    .pcss3t-theme-1>input:checked+label {
+      margin-bottom: 0;
+      padding-bottom: 5px;
+      border-bottom-right-radius: 0;
+      border-bottom-left-radius: 0;
+      color: #760504;
+      opacity: 1;
+    }
+
+    .pcss3t-theme-1>ul {
+      border-radius: 5px;
+      box-shadow: 0 3px rgba(0, 0, 0, 0.2);
+    }
+
+    .pcss3t-theme-1>.tab-content-first:checked~ul {
+      border-top-left-radius: 0;
+    }
+
+    @media screen and (max-width: 767px) {
+      .pcss3t-theme-1>label {
+        margin-right: 0;
+      }
+
+      .pcss3t-theme-1>input:checked+label {
+        margin-bottom: 5px;
+        padding-bottom: 0;
+        border-radius: 5px;
+      }
+
+      .pcss3t-theme-1>.tab-content-first:checked~ul {
+        border-top-left-radius: 5px;
+      }
+    }
+
+    @media screen and (max-width: 767px) {
+      .pcss3t-theme-5>input:checked+label:after {
+        display: none;
+      }
+    }
+
+    .pcss3t>ul,
+    .pcss3t>ul>li {
+      height: 370px;
+    }
+
+    main {
+      background-color: rain;
+    }
+
+    h1 {
+      text-align: center;
+      font-weight: 300;
+    }
+
+    table {
+      display: table;
+      width: 100%;
+    }
+
+    th,
+    td {
+      display: table-cell;
+      padding: 10px;
+      border: 1px solid #ddd;
+    }
+
+    th {
+      background-color: #f2f2f2;
+      font-weight: bold;
+    }
+
+    .status-box {
+      display: inline-block;
+      padding: 5px 10px;
+      border-radius: 5px;
+      margin-left: 1rem;
+    }
+
+    .active {
+      background-color: green;
+      color: white;
+    }
+
+    .inactive {
+      background-color: #b12b24;
+      color: white;
+    }
+
+    .pending {
+      background-color: #ffc857;
+      color: black;
+    }
+
+    .suspended {
+      background-color: #dfe1e7;
+      color: black;
+    }
+
+    .ag-format-container {
+      background: #dfe1e7;
+      padding: 20px;
+      display: flex;
+      margin-bottom: 20px;
+      width: 100%;
+      
+    }
+
+    .ag-courses_box {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: start;
+      -ms-flex-align: start;
+      align-items: flex-start;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      justify-content: center;
+
+      padding: 10px 0;
+    }
+
+    .ag-courses_item {
+      -ms-flex-preferred-size: 200px;
+      flex-basis: 350px;
+      margin: 0 15px 50px;
+      overflow: hidden;
+      border-radius: 28px;
+    }
+
+    .ag-courses-item_link {
+      display: block;
+      padding: 30px 20px;
+      background-color: #FFF;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .ag-courses-item_link:hover,
+    .ag-courses-item_link:hover .ag-courses-item_date {
+      text-decoration: none;
+      color: #FFF;
+    }
+
+    .ag-courses-item_link:hover .ag-courses-item_bg {
+      -webkit-transform: scale(10);
+      -ms-transform: scale(10);
+      transform: scale(10);
+    }
+
+    .ag-courses-item_title {
+      overflow: hidden;
+      font-size: 24px;
+      color: #000;
+      margin-bottom: 5px;
+
+    }
+
+    .ag-courses-item_link:hover,
+    .ag-courses-item_link:hover .ag-courses-item_title {
+      text-decoration: none;
+      color: #fff;
+    }
+
+    .ag-courses-item_link:hover .ag-courses-item_bg {
+      -webkit-transform: scale(10);
+      -ms-transform: scale(10);
+      transform: scale(10);
+    }
+
+    .ag-courses-item_date-box {
+      font-size: 18px;
+      color: #000;
+      margin-top: 5px;
+    }
+
+    .ag-courses-item_link:hover,
+    .ag-courses-item_link:hover .ag-courses-item_date-box {
+      text-decoration: none;
+      color: #fff;
+    }
+
+    .ag-courses-item_link:hover .ag-courses-item_bg {
+      -webkit-transform: scale(10);
+      -ms-transform: scale(10);
+      transform: scale(10);
+    }
+
+    .ag-courses-item_date {
+      font-weight: bold;
+      color: #760504;
+
+      -webkit-transition: color .5s ease;
+      -o-transition: color .5s ease;
+      transition: color .5s ease
+    }
+
+    .ag-courses-item_bg {
+      height: 128px;
+      width: 128px;
+      background-color: #760504;
+
+      z-index: 1;
+      position: absolute;
+      top: -75px;
+      right: -75px;
+
+      border-radius: 50%;
+
+      -webkit-transition: all .5s ease;
+      -o-transition: all .5s ease;
+      transition: all .5s ease;
+    }
+
+    .ag-courses_item:nth-child(2n) .ag-courses-item_bg {
+      background-color: #760504;
+    }
+
+    .ag-courses_item:nth-child(3n) .ag-courses-item_bg {
+      background-color: #760504;
+    }
+
+    .ag-courses_item:nth-child(4n) .ag-courses-item_bg {
+      background-color: #760504;
+    }
+
+    .ag-courses_item:nth-child(5n) .ag-courses-item_bg {
+      background-color: #760504;
+    }
+
+    .ag-courses_item:nth-child(6n) .ag-courses-item_bg {
+      background-color: #760504;
+    }
+
+
+
+    @media only screen and (max-width: 979px) {
+      .ag-courses_item {
+        -ms-flex-preferred-size: calc(50% - 30px);
+        flex-basis: calc(50% - 30px);
+      }
+
+      .ag-courses-item_title {
+        font-size: 24px;
+      }
+    }
+
+    @media only screen and (max-width: 767px) {
+      .ag-format-container {
+        width: 96%;
+      }
+
+    }
+
+    @media only screen and (max-width: 639px) {
+      .ag-courses_item {
+        -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+      }
+
+      .ag-courses-item_title {
+        min-height: 72px;
+        line-height: 1;
+
+        font-size: 24px;
+      }
+
+      .ag-courses-item_link {
+        padding: 22px 40px;
+      }
+
+      .ag-courses-item_date-box {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Kategori Sumber Daya Alam</h1>
+  </header>
+  <section>
+    <div class="ag-format-container">
+      <div class="ag-courses_box">
+        <div class="ag-courses_item">
+          <a href="#" class="ag-courses-item_link">
+            <div class="ag-courses-item_bg"></div>
+  
+            <div class="ag-courses-item_title">
+              Pengaduan yang Diterima
+            </div>
+            <div class="ag-courses-item_date-box">
+              Kerusakan Lingkungan:
+            </div>
+            <div class="ag-courses-item_date-box">
+              Penebangan liar, perburuan ilegal, pencemaran air, dll.
+              Konservasi Alam:
+              Perlindungan habitat, penanganan satwa liar, dll.
+              Pengelolaan Sumber Daya:
+              Izin lingkungan yang tidak sesuai, eksploitasi sumber daya alam, dll.
+              Bencana Alam:
+              Laporan bencana alam, mitigasi risiko, dll.
+            </div>
+          </a>
+        </div>
+  
+        <div class="ag-courses_item">
+          <a href="#" class="ag-courses-item_link">
+            <div class="ag-courses-item_bg"></div>
+  
+            <div class="ag-courses-item_title">
+              Respons dan Informasi Tambahan
+            </div>
+  
+            <div class="ag-courses-item_date-box">
+              Masyarakat diharapkan melaporkan setiap permasalahan atau kebutuhan mendesak terkait sumber daya alam yang mereka alami.
+              Pastikan untuk memberikan informasi yang akurat dan detail untuk memudahkan respons dari pihak terkait.
+              Pengaduan yang melibatkan kerusakan lingkungan atau konservasi alam akan diberikan prioritas tinggi dalam penanganan.
+            </div>
+          </a>
+        </div>
+  
+        <div class="ag-courses_item">
+          <a href="#" class="ag-courses-item_link">
+            <div class="ag-courses-item_bg"></div>
+  
+            <div class="ag-courses-item_title">
+              Cara Melaporkan
+            </div>
+  
+            <div class="ag-courses-item_date-box">
+              Isi Form Pengaduan: Kunjungi web layanan aspirasi masyarakat dan isi form pengaduan.
+              Pilih Kategori: Pilih kategori Sumber Daya Alam yang sesuai dengan pengaduan Anda.
+              Isi Data Informasi: Masukkan informasi lengkap mengenai pengaduan Anda, termasuk deskripsi masalah dan kebutuhan yang diperlukan.
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <main>
+    <section class="status">
+      <h2>Status Pengaduan</h2>
+    </section>
+
+    <div class="pcss3t pcss3t-effect-scale pcss3t-theme-1">
+      <input type="radio" name="pcss3t" checked id="tab1" class="tab-content-first">
+      <label for="tab1"><i class="icon-bolt"></i>Semua Pengaduan</label>
+
+      <input type="radio" name="pcss3t" id="tab2" class="tab-content-2">
+      <label for="tab2"><i class="icon-picture"></i>Belum Diproses</label>
+
+      <input type="radio" name="pcss3t" id="tab3" class="tab-content-3">
+      <label for="tab3"><i class="icon-cogs"></i>Sedang Diproses</label>
+
+      <input type="radio" name="pcss3t" id="tab5" class="tab-content-last">
+      <label for="tab5"><i class="icon-globe"></i>Selesai</label>
+
+      <ul>
+        <li class="tab-content tab-content-first typography">
+          <table>
+            <thead>
+              <tr>
+                <th data-title="Nama Pengaduan">Nama Pengaduan</th>
+                <th data-title="Deskripsi">Deskripsi</th>
+                <th data-title="Status">Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-title="Nama Pengaduan">Kerusakan Jalan Akibat Tanah Longsor</td>
+                <td data-title="Deskripsi">Melaporkan jalan raya yang terputus akibat tanah longsor. Menghalangi akses masyarakat dan transportasi barang.</td>
+                <td data-title="Status"><span class="status-box inactive">Belum Diproses</span></td>
+              </tr>
+              <tr>
+                <td data-title="Nama Pengaduan">Kebutuhan Bantuan Medis di Pengungsian</td>
+                <td data-title="Deskripsi">Permintaan bantuan medis di tempat pengungsian akibat bencana banjir. Banyak warga yang membutuhkan perawatan medis darurat.</td>
+                <td data-title="Status"><span class="status-box inactive">Belum Diproses</span></td>
+              </tr>
+              <tr>
+                <td data-title="Nama Pengaduan">Kebutuhan Makanan dan Air Bersih</td>
+                <td data-title="Deskripsi"> Melaporkan kebutuhan mendesak akan pasokan makanan dan air bersih di daerah terdampak bencana alam. Masyarakat kekurangan persediaan makanan dan air minum.</td>
+                <td data-title="Status"><span class="status-box pending">Sedang Diproses</span></td>
+              </tr>
+              <tr>
+                <td data-title="Nama Pengaduan">Perbaikan Jaringan Listrik</td>
+                <td data-title="Deskripsi">Melaporkan kerusakan jaringan listrik akibat bencana alam. Banyak wilayah yang mengalami pemadaman listrik dan memerlukan perbaikan segera.</td>
+                <td data-title="Status"><span class="status-box suspended">Selesai</span></td>
+              </tr>
+              <tr>
+                <td data-title="Nama Pengaduan">Laporan Kehilangan Orang Terdekat</td>
+                <td data-title="Deskripsi">Melaporkan kehilangan anggota keluarga atau orang terdekat akibat bencana alam. Membutuhkan bantuan pencarian dan penyelamatan.</td>
+                <td data-title="Status"><span class="status-box inactive">Belum Diproses</span></td>
+              </tr>
+              <tr>
+                <td data-title="Nama Pengaduan">Perlindungan Lingkungan Hidup Pasca-Bencana</td>
+                <td data-title="Deskripsi">Laporan tentang kerusakan lingkungan hidup dan ekosistem setelah bencana alam. Membutuhkan tindakan restorasi dan perlindungan lingkungan.</td>
+                <td data-title="Status"><span class="status-box inactive">Belum Diproses</span></td>
+              </tr>
+              <tr>
+                <td data-title="Nama Pengaduan">Sosialisasi Pencegahan Bencana di Sekolah</td>
+                <td data-title="Deskripsi">Permintaan untuk menyelenggarakan kegiatan sosialisasi pencegahan bencana di sekolah setempat. Mengedukasi siswa dan masyarakat tentang tindakan yang tepat saat menghadapi bencana alam.</td>
+                <td data-title="Status"><span class="status-box pending">Sedang Diproses</span></td>
+              </tr>
+              <tr>
+                <td data-title="Nama Pengaduan">Bantuan Psikososial untuk Korban Bencana</td>
+                <td data-title="Deskripsi">Permintaan bantuan psikososial bagi korban bencana alam yang mengalami trauma dan kecemasan. Masyarakat memerlukan dukungan mental dan emosional dalam menghadapi dampak bencana.</td>
+                <td data-title="Status"><span class="status-box suspended">Selesai</span></td>
+              </tr>
+              
+            </tbody>
+          </table>
+        </li>
+
+
+        <li class="tab-content tab-content-2 typography">
+          <table>
+            <thead>
+              <tr>
+                <th data-title="Nama Pengaduan">Nama Pengaduan</th>
+                <th data-title="Deskripsi">Deskripsi</th>
+                <th data-title="Status">Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-title="Nama Pengaduan">Laporan Kehilangan Orang Terdekat</td>
+                <td data-title="Deskripsi">Melaporkan kehilangan anggota keluarga atau orang terdekat akibat bencana alam. Membutuhkan bantuan pencarian dan penyelamatan.</td>
+                <td data-title="Status"><span class="status-box inactive">Belum Diproses</span></td>
+              </tr>
+              <tr>
+                <td data-title="Nama Pengaduan">Perlindungan Lingkungan Hidup Pasca-Bencana</td>
+                <td data-title="Deskripsi">Laporan tentang kerusakan lingkungan hidup dan ekosistem setelah bencana alam. Membutuhkan tindakan restorasi dan perlindungan lingkungan.</td>
+                <td data-title="Status"><span class="status-box inactive">Belum Diproses</span></td>
+              </tr>
+              <tr>
+                <td data-title="Nama Pengaduan">Sosialisasi Pencegahan Bencana di Sekolah</td>
+                <td data-title="Deskripsi">Permintaan untuk menyelenggarakan kegiatan sosialisasi pencegahan bencana di sekolah setempat. Mengedukasi siswa dan masyarakat tentang tindakan yang tepat saat menghadapi bencana alam.</td>
+                <td data-title="Status"><span class="status-box inactive">Belum Diproses</span></td>
+              </tr>
+              <tr>
+                <td data-title="Nama Pengaduan">Bantuan Psikososial untuk Korban Bencana</td>
+                <td data-title="Deskripsi">Permintaan bantuan psikososial bagi korban bencana alam yang mengalami trauma dan kecemasan. Masyarakat memerlukan dukungan mental dan emosional dalam menghadapi dampak bencana.</td>
+                <td data-title="Status"><span class="status-box inactive">Belum Diproses</span></td>
+              </tr>              
+            </tbody>
+          </table>
+        </li>
+
+        <li class="tab-content tab-content-3 typography">
+          <table>
+            <thead>
+              <tr>
+                <th data-title="Nama Pengaduan">Nama Pengaduan</th>
+                <th data-title="Deskripsi">Deskripsi</th>
+                <th data-title="Status">Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-title="Nama Pengaduan">Laporan Kehilangan Orang Terdekat</td>
+                <td data-title="Deskripsi">Melaporkan kehilangan anggota keluarga atau orang terdekat akibat bencana alam. Membutuhkan bantuan pencarian dan penyelamatan.</td>
+                <td data-title="Status"><span class="status-box pending">Sedang Diproses</span></td>
+              </tr>
+              <tr>
+                <td data-title="Nama Pengaduan">Perlindungan Lingkungan Hidup Pasca-Bencana</td>
+                <td data-title="Deskripsi">Laporan tentang kerusakan lingkungan hidup dan ekosistem setelah bencana alam. Membutuhkan tindakan restorasi dan perlindungan lingkungan.</td>
+                <td data-title="Status"><span class="status-box pending">Sedang Diproses</span></td>
+              </tr>
+              <tr>
+                <td data-title="Nama Pengaduan">Sosialisasi Pencegahan Bencana di Sekolah</td>
+                <td data-title="Deskripsi">Permintaan untuk menyelenggarakan kegiatan sosialisasi pencegahan bencana di sekolah setempat. Mengedukasi siswa dan masyarakat tentang tindakan yang tepat saat menghadapi bencana alam.</td>
+                <td data-title="Status"><span class="status-box pending">Sedang Diproses</span></td>
+              </tr>
+              <tr>
+                <td data-title="Nama Pengaduan">Bantuan Psikososial untuk Korban Bencana</td>
+                <td data-title="Deskripsi">Permintaan bantuan psikososial bagi korban bencana alam yang mengalami trauma dan kecemasan. Masyarakat memerlukan dukungan mental dan emosional dalam menghadapi dampak bencana.</td>
+                <td data-title="Status"><span class="status-box pending">Sedang Diproses</span></td>
+              </tr>              
+            </tbody>
+          </table>
+        </li>
+
+        <li class="tab-content tab-content-last typography">
+          <table>
+            <thead>
+              <tr>
+                <th data-title="Nama Pengaduan">Nama Pengaduan</th>
+                <th data-title="Deskripsi">Deskripsi</th>
+                <th data-title="Status">Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-title="Nama Pengaduan">Laporan Kehilangan Orang Terdekat</td>
+                <td data-title="Deskripsi">Melaporkan kehilangan anggota keluarga atau orang terdekat akibat bencana alam. Membutuhkan bantuan pencarian dan penyelamatan.</td>
+                <td data-title="Status"><span class="status-box suspended">Selesai</span></td>
+              </tr>
+              <tr>
+                <td data-title="Nama Pengaduan">Perlindungan Lingkungan Hidup Pasca-Bencana</td>
+                <td data-title="Deskripsi">Laporan tentang kerusakan lingkungan hidup dan ekosistem setelah bencana alam. Membutuhkan tindakan restorasi dan perlindungan lingkungan.</td>
+                <td data-title="Status"><span class="status-box suspended">Selesai</span></td>
+              </tr>
+              <tr>
+                <td data-title="Nama Pengaduan">Sosialisasi Pencegahan Bencana di Sekolah</td>
+                <td data-title="Deskripsi">Permintaan untuk menyelenggarakan kegiatan sosialisasi pencegahan bencana di sekolah setempat. Mengedukasi siswa dan masyarakat tentang tindakan yang tepat saat menghadapi bencana alam.</td>
+                <td data-title="Status"><span class="status-box suspended">Selesai</span></td>
+              </tr>
+              <tr>
+                <td data-title="Nama Pengaduan">Bantuan Psikososial untuk Korban Bencana</td>
+                <td data-title="Deskripsi">Permintaan bantuan psikososial bagi korban bencana alam yang mengalami trauma dan kecemasan. Masyarakat memerlukan dukungan mental dan emosional dalam menghadapi dampak bencana.</td>
+                <td data-title="Status"><span class="status-box suspended">Selesai</span></td>
+              </tr>              
+            </tbody>
+          </table>
+        </li>
+      </ul>
+    </div>
+    <!--/ tabs -->
+    </div>
+  </main>
+</body>
+
+</html>

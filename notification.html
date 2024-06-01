@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <title>Notification </title>
+</head>
+<style>
+  /* styles.css */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #760504;
+    color: white;
+    padding: 1rem;
+}
+
+header h1 {
+    margin: 0;
+}
+
+main {
+    padding: 2rem;
+}
+
+.notification-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.notification {
+    background-color: #f2f2f2;
+    padding: 1rem;
+    border-radius: 5px;
+    width: 100%;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.notification h3 {
+    margin: 0;
+    margin-bottom: 0.5rem;
+    margin-right: 1rem;
+}
+.success {
+    background-color: #ffc857;
+}
+
+.info {
+    background-color: #ffc857;
+}
+
+.warning {
+    background-color: #ffc857;
+}
+
+.error {
+    background-color:#ffc857;
+}
+
+.notification i {
+    font-size: 1.5rem;
+    margin-right: 0.5rem;
+}
+
+footer {
+  background-color: #760504;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+</style>
+<body>
+    <header>
+        <h1>Notification </h1>
+    </header>
+    <main>
+        <div class="notification-container">
+            <div class="notification success">
+                <i class="fas fa-check"></i>
+                <h3>Success</h3>
+                <p>This is a success notification.</p>
+            </div>
+            <div class="notification info">
+                <i class="fas fa-info"></i>
+                <h3>Info</h3>
+                <p>This is an info notification.</p>
+            </div>
+            <div class="notification warning">
+                <i class="fas fa-exclamation-triangle"></i>
+                <h3>Warning</h3>
+                <p>This is a warning notification.</p>
+            </div>
+            <div class="notification error">
+                <i class="fas fa-times"></i>
+                <h3>Error</h3>
+                <p>This is an error notification.</p>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2023 Notification Page. All rights reserved.</p>
+    </footer>
+</body>
+</html>

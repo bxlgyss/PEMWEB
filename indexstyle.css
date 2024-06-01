@@ -1,0 +1,265 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Navbar Styles */
+
+.navbar {
+    background-color: #212529; /* Ubah warna background navbar */
+    color: #fff;
+    padding: 10px 0;
+    display: flex;
+    flex-direction: row; /* Ubah menjadi baris horizontal */
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 15px; /* Ruang kiri */
+    padding-right: 15px; /* Ruang kanan */
+}
+.navbar {
+    background-color: transparent !important;
+    transition: background-color 0.5s ease;
+  }
+  
+.navbar.scrolled {
+    background-color: #760504 !important; /* Change this to your desired color */
+}
+
+.navbar .container-fluid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .navbar-brand {
+    font-size: 24px;
+    text-decoration: none;
+    color: #fff;
+}
+
+.navbar .navbar-nav {
+    display: flex;
+    flex-direction: row; /* Ubah menjadi baris horizontal */
+    align-items: center;
+}
+
+.navbar .nav-item {
+    margin-right: 20px;
+}
+
+.navbar .nav-link {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s ease-in-out;
+}
+
+.navbar .nav-link:hover {
+    color: #000000;
+}
+
+/* Navbar Toggler Icon Styles */
+.navbar-toggler {
+    color: #fff;
+    border-color: #fff;
+}
+
+.navbar-toggler-icon {
+    background-color: #fff;
+}
+
+/* Dropdown Menu Styles */
+.navbar .dropdown-menu {
+    background-color: #760504; /* Ubah warna background dropdown menu */
+}
+
+.navbar .dropdown-menu a {
+    color: #fff;
+}
+
+/* Active Link Styles */
+.navbar .nav-item.active .nav-link {
+    color: #ffc875;
+}
+
+/* Disabled Link Styles */
+.navbar .nav-item.disabled .nav-link {
+    color: #760504;
+}
+
+
+/* Header Styles */
+header {
+    text-align: center;
+    padding: 60px 0;
+}
+
+.custom-carousel {
+    margin-top: 70px; /* Atur margin atas sesuai kebutuhan Anda */
+}
+
+/* Mengatur tinggi carousel */
+.carousel-inner img {
+    height: 500px; /* Sesuaikan dengan tinggi yang diinginkan */
+}
+.carousel-centered {
+    margin: 0 auto;
+    width: 67%;
+}
+
+.carousel-item {
+    text-align: center;
+    align-items: center;
+}
+
+.carousel-caption {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1rem;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+}
+/* Mengatur warna teks caption */
+.carousel-caption h5,
+.carousel-caption p {
+    color: #fff; /* Warna teks */
+}
+
+/* Mengatur latar belakang dan opacity caption */
+.carousel-caption {
+    background-color: rgba(130, 110, 110, 0.5); /* Warna latar belakang dengan opacity */
+    padding: 10px; /* Padding untuk isi caption */
+}
+
+/* Mengatur warna panah kontrol */
+.carousel-control-prev,
+.carousel-control-next {
+    color: #000000; /* Warna panah */
+    background-color: transparent; /* Transparan */
+    border :#17a2b8; /* Hapus border */
+}
+
+
+
+/* Hero Section Styles */
+.hero {
+    background-color: #f8f9fa;
+    padding: 50px 0;
+}
+
+.hero-content {
+    text-align: center;
+}
+
+.hero p {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.hero-features {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-features li {
+    margin-right: 20px;
+    font-size: 18px;
+    color: #333;
+}
+
+/* Why Choose Us Section Styles */
+.why-choose-us {
+    padding: 50px 0;
+}
+
+.why-choose-us h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.why-choose-us-items {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: minmax(200px, auto);
+    gap: 20px;
+}
+.layanan-text {
+    text-align: center;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    background-color: #f1f1f1;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    text-align: center;
+}
+.item-link {
+    display: block;
+}
+.item-1:hover, .item-1:focus-visible {
+    transform: scale(1.1); /* Ukuran lebih besar saat dihover atau diklik */
+}
+.item img {
+    width: 100px;
+    margin-bottom: 20px;
+}
+
+.item h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.item p {
+    color: #666;
+}
+
+/* Our Services Section Styles */
+.our-services {
+    padding: 50px 0;
+}
+
+.our-services h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.our-services-items {
+    display: flex;
+    justify-content: space-between;
+}
+
+.item img {
+    width: 100px;
+    margin-bottom: 10px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    .nav-links li {
+        margin-right: 10px;
+    }
+
+    .item img {
+        width: 80px;
+        margin-bottom: 10px;
+    }
+}
